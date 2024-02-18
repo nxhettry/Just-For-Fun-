@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+    <style>
+        body, button {
+            background-color: black;
+            color: #00ff00;
+            font-family: "Sixtyfour", sans-serif;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .body-before{
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+        .body-after{
+            height: 100vh;
+            width: 100vw;
+        }
+        button{
+            height: 6rem;
+            width: 14rem;
+            margin: auto;
+            position: relative;
+        }
+        body header {
+            border-bottom: 2px solid #00ff00;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bolder;
+            margin: auto 0;
+        }
+        .top{
+            position: absolute;
+            top: 0;
+        }
+        .message{
+            margin: auto 0;
+            font-size: 2rem;
+        }
+        
+    </style>
+</head>
+
+<body class="body-before center">
+    <header class="top">Terminal</header>
+    <div class="message">
+
+    </div>
+    <button id="btn">Don't Click !</button>
+    <script src="./script.js"></script>
+</body>
+
+</html>
