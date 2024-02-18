@@ -7,6 +7,7 @@ btn.addEventListener("click", () => {
     body.classList.remove("body-before", "center");
     h.classList.remove("top");
     printMsz();
+    console.log("Mr. Subham Baral From Nepal. You are hacked.")
 })
 
 let text = ["Initializing hacking .....", "Reading your files ......", "Password files detected ......", "Sending all passwords and personal files to the server .......", "Cleaning up ........"]
