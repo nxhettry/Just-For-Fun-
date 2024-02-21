@@ -1,36 +1,33 @@
 let msz = document.querySelector(".message");
 let btn = document.querySelector("#btn");
 let body = document.querySelector("body");
-let h = document.querySelector(".top");
-btn.addEventListener("click", () => {
+let head = document.querySelector(".top");
+
+let toPrint = ["Initializing hacking .....", "Reading your files ......", "Password files detected ......", "Sending all passwords and personal files to the server .......", "Cleaning up ........"]
+
+btn.addEventListener("click", async () => {
     btn.remove();
-    body.classList.remove("body-before", "center");
-    h.classList.remove("top");
-    printMsz();
-    console.log("Mr. Subham Baral From Nepal. You are hacked.")
+    head.classList.remove("top");
+    body.classList.remove("center", "body-before");
+    body.classList.add("body-after");
+    for (let item of toPrint) {
+        await showRes(item);
+    }
+
 })
 
-let text = ["Initializing hacking .....", "Reading your files ......", "Password files detected ......", "Sending all passwords and personal files to the server .......", "Cleaning up ........"]
+const showRes = async (item) => {
+    await delay();
+    let p = document.createElement("p");
+    p.innerText = item;
+    msz.appendChild(p);
+}
 
-const delayText = () => {
+const delay = () => {
+    let time = Math.floor(Math.random() * 8000);
     return new Promise ((resolve, reject) => {
-        let time = Math.floor(Math.random() * 7000) +1;
         setTimeout(() => {
             resolve();
         }, time);
     });
-}
-
-const startHack = async (items) => {
-    await delayText();
-    let newMsz = document.createElement("p");
-    newMsz.innerText = items;
-    msz.append(newMsz);
 };
-
-const printMsz = async () => {
-    for (let items of text) {
-        await startHack(items);
-    }  
-};
-
